@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+This repository is a Next.js portfolio site with a contact API route that can send messages through SendGrid or Formspree.
 
-First, run the development server:
+## Local development
+
+Install dependencies and start the app:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and fill in the values you want to use.
 
-## Learn More
+Required for production:
 
-To learn more about Next.js, take a look at the following resources:
+- `NEXT_PUBLIC_SITE_URL`: your deployed Vercel URL or custom domain, for example `https://your-domain.vercel.app`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Optional for the contact form:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `SENDGRID_API_KEY`: enables email delivery through SendGrid
+- `CONTACT_EMAIL`: inbox that receives contact form submissions
+- `FORMSPREE_ENDPOINT`: alternative to SendGrid; if set, Formspree is used instead
 
-## Deploy on Vercel
+## Vercel deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is ready to deploy on Vercel as a standard Next.js app.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Import the repository into Vercel.
+2. Keep the detected framework preset as `Next.js`.
+3. Leave the default build settings in place.
+4. Add the production environment variables from the list above.
+5. Deploy.
+
+The checked-in `vercel.json` keeps the install, build, and dev commands explicit for the project.
