@@ -16,11 +16,12 @@ export default function About() {
       aria-label="About"
       className="section-surface relative"
     >
-      <div className="section-container grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+      <div className="section-container grid gap-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-start lg:gap-16">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           animate={isInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.6 }}
+          className="max-w-[44rem]"
         >
           <span className="section-kicker">About</span>
           <h2 className="section-title">About Me</h2>
@@ -71,7 +72,7 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 lg:pt-12">
           {personalInfo.principles.map((principle, index) => (
             <motion.article
               key={principle.title}
