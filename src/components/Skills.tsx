@@ -4,19 +4,19 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   Code2,
-  LayoutPanelTop,
-  Layers3,
-  PenTool,
-  Sparkles,
+  FileText,
+  Network,
+  Radar,
+  ShieldCheck,
 } from "lucide-react";
-import { skills } from "@/lib/data";
+import { toolkit } from "@/lib/data";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  sparkles: Sparkles,
-  layout: LayoutPanelTop,
+  shield: ShieldCheck,
+  network: Network,
   code: Code2,
-  pen: PenTool,
-  layers: Layers3,
+  radar: Radar,
+  report: FileText,
 };
 
 export default function Skills() {
@@ -25,9 +25,9 @@ export default function Skills() {
 
   return (
     <section
-      id="skills"
+      id="toolkit"
       ref={ref}
-      aria-label="Skills"
+      aria-label="Core toolkit"
       className="section-surface relative"
     >
       <div className="section-container">
@@ -36,16 +36,17 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-kicker">Skills</span>
-          <h2 className="section-title">Skills & Tools</h2>
+          <span className="section-kicker">Toolkit</span>
+          <h2 className="section-title">Core Toolkit</h2>
           <p className="section-subtitle">
-            A concise overview of the technologies, tools, and professional strengths I bring to my work.
+            The concepts, tools, and communication habits I am building into a
+            stronger junior analyst foundation.
           </p>
         </motion.div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {skills.map((category, index) => {
-            const Icon = iconMap[category.icon] || Sparkles;
+          {toolkit.map((category, index) => {
+            const Icon = iconMap[category.icon] || ShieldCheck;
 
             return (
               <motion.article

@@ -32,8 +32,9 @@ export default function Footer() {
             </div>
 
             <p className="mt-6 max-w-xl text-[15px] leading-8 text-[var(--color-text-muted)] sm:text-base">
-              Focused on thoughtful interfaces, clean frontend execution, and
-              work that feels clear from the first glance to the final detail.
+              Cybersecurity student building toward SOC and blue-team analyst
+              roles through hands-on projects, roadmap-driven labs, and clear
+              technical communication.
             </p>
           </div>
 
@@ -60,7 +61,7 @@ export default function Footer() {
           <p>
             {new Date().getFullYear()} {personalInfo.name}
           </p>
-          <p>Focused on frontend work, thoughtful UI, and continuous growth.</p>
+          <p>Focused on blue-team growth, defensive tooling, and continuous learning.</p>
         </div>
       </div>
     </footer>

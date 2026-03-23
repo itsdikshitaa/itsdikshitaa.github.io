@@ -4,12 +4,12 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
-  BriefcaseBusiness,
   Download,
   FileStack,
   FileText,
   MapPin,
-  Sparkles,
+  ShieldCheck,
+  Target,
 } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
@@ -19,9 +19,9 @@ export default function Resume() {
 
   return (
     <section
-      id="profile"
+      id="resume"
       ref={ref}
-      aria-label="Profile"
+      aria-label="Resume snapshot"
       className="section-surface relative"
     >
       <div className="section-container">
@@ -30,10 +30,11 @@ export default function Resume() {
           animate={isInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-kicker">Profile</span>
-          <h2 className="section-title">Professional Profile</h2>
+          <span className="section-kicker">Resume</span>
+          <h2 className="section-title">Resume Snapshot</h2>
           <p className="section-subtitle">
-            A quick summary of my background, availability, and the kind of opportunities I am looking for.
+            A quick summary of role fit, availability, and the kind of
+            cybersecurity opportunities I am actively building toward.
           </p>
         </motion.div>
 
@@ -45,12 +46,12 @@ export default function Resume() {
             className="panel overflow-hidden p-6 sm:p-8"
           >
             <div className="grid gap-5 sm:grid-cols-2">
-              <ProfileFact label="Name" value={personalInfo.name} />
+              <ProfileFact label="Target role" value="SOC / Blue-Team Analyst" />
               <ProfileFact label="Location" value={personalInfo.location} />
               <ProfileFact label="Availability" value={personalInfo.availability} />
               <ProfileFact
                 label="Current focus"
-                value="Hands-on product work, supportive teams, and opportunities to keep improving through real project experience."
+                value="Defensive tooling, roadmap-driven labs, and clearer analyst-style reporting."
               />
             </div>
 
@@ -59,7 +60,9 @@ export default function Resume() {
                 Professional summary
               </p>
               <p className="mt-3 max-w-2xl text-[var(--color-text-muted)]">
-                {personalInfo.status}
+                Cybersecurity student building practical evidence through
+                privacy-first tools, vulnerability-focused projects, and a
+                transparent learning roadmap oriented toward SOC readiness.
               </p>
             </div>
           </motion.article>
@@ -73,15 +76,16 @@ export default function Resume() {
             <div className="panel-alt p-6">
               <div className="flex items-start gap-3">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[var(--color-border)] bg-[rgba(255,255,255,0.04)]">
-                  <BriefcaseBusiness className="h-5 w-5 text-[var(--color-accent-soft)]" />
+                  <ShieldCheck className="h-5 w-5 text-[var(--color-accent-soft)]" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[var(--color-text)]">
-                    Profile overview
+                    Recruiter snapshot
                   </h3>
                   <p className="mt-2 text-sm text-[var(--color-text-muted)]">
-                    This section gives a clean summary of who I am, what I am
-                    looking for, and how to get in touch for professional opportunities.
+                    Best suited for internships, student analyst programs, and
+                    entry-level roles where strong fundamentals, curiosity, and
+                    communication matter.
                   </p>
                 </div>
               </div>
@@ -97,24 +101,26 @@ export default function Resume() {
                   <FileStack className="h-4 w-4 text-[var(--color-secondary)]" />
                   Resume available for download
                 </div>
+                <div className="flex items-center gap-3">
+                  <Target className="h-4 w-4 text-[var(--color-accent-soft)]" />
+                  Focused on SOC and blue-team analyst growth
+                </div>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="#contact" className="btn-secondary">
-                  Contact Dikshita
+                  Reach out
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
             </div>
 
-            {/* ── Resume download card ── */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : undefined}
               transition={{ delay: 0.34, duration: 0.55 }}
               className="resume-download-card panel overflow-hidden"
             >
-              {/* Decorative gradient strip */}
               <div className="h-1 w-full bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-accent-soft)] to-[var(--color-secondary)]" />
 
               <div className="p-6">
@@ -127,7 +133,7 @@ export default function Resume() {
                       Download Resume
                     </h3>
                     <p className="mt-1 text-sm text-[var(--color-text-dim)]">
-                      PDF · Updated 2026
+                      PDF · Cybersecurity portfolio profile
                     </p>
                   </div>
                 </div>
@@ -151,7 +157,7 @@ export default function Resume() {
                     id="resume-view-profile"
                     aria-label="View Dikshita Konwar's resume in a new tab"
                   >
-                    <Sparkles className="h-3.5 w-3.5" />
+                    <FileText className="h-3.5 w-3.5" />
                     View Online
                   </a>
                 </div>

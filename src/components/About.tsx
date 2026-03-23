@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Compass, MapPin, Quote, Sparkles } from "lucide-react";
+import { MapPin, ShieldCheck, Telescope } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
 export default function About() {
@@ -11,9 +11,9 @@ export default function About() {
 
   return (
     <section
-      id="about"
+      id="profile"
       ref={ref}
-      aria-label="About"
+      aria-label="Analyst profile"
       className="section-surface relative"
     >
       <div className="section-container grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
@@ -22,10 +22,11 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-kicker">About</span>
-          <h2 className="section-title">About Me</h2>
+          <span className="section-kicker">Profile</span>
+          <h2 className="section-title">Analyst Profile</h2>
           <p className="section-subtitle">
-            A brief introduction to my background, working style, and professional interests.
+            Why I am pursuing cybersecurity, how I approach analyst growth, and
+            what I want my work to communicate.
           </p>
 
           <div className="mt-8 space-y-5 text-[var(--color-text-muted)]">
@@ -49,12 +50,13 @@ export default function About() {
           >
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[var(--color-border)] bg-[rgba(255,255,255,0.03)]">
-                <Quote className="h-5 w-5 text-[var(--color-accent-soft)]" />
+                <ShieldCheck className="h-5 w-5 text-[var(--color-accent-soft)]" />
               </div>
               <div>
                 <p className="text-lg text-[var(--color-text)]">
-                  &ldquo;I believe strong work should be clear, thoughtful, and
-                  professionally presented.&rdquo;
+                  I am most motivated by defensive work that combines practical
+                  investigation, hands-on tooling, and communication others can
+                  trust.
                 </p>
                 <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-[var(--color-text-dim)]">
                   <span className="inline-flex items-center gap-2">
@@ -62,8 +64,8 @@ export default function About() {
                     {personalInfo.location}
                   </span>
                   <span className="inline-flex items-center gap-2">
-                    <Sparkles className="h-4 w-4 text-[var(--color-secondary)]" />
-                    Frontend development and interface design
+                    <Telescope className="h-4 w-4 text-[var(--color-secondary)]" />
+                    Aspiring SOC / blue-team analyst
                   </span>
                 </div>
               </div>
@@ -82,7 +84,7 @@ export default function About() {
             >
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[var(--color-border)] bg-[rgba(255,255,255,0.04)]">
-                  <Compass className="h-5 w-5 text-[var(--color-accent-soft)]" />
+                  <ShieldCheck className="h-5 w-5 text-[var(--color-accent-soft)]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-[var(--color-text)]">

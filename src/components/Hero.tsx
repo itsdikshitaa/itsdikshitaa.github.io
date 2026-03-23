@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, MapPin, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  MapPin,
+  Radar,
+  ShieldCheck,
+} from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
 export default function Hero() {
@@ -18,7 +24,7 @@ export default function Hero() {
       aria-label="Hero"
       className="relative overflow-hidden pt-28 sm:pt-32"
     >
-      <div className="pointer-events-none absolute inset-x-0 top-16 -z-10 mx-auto h-[32rem] max-w-6xl rounded-full bg-[radial-gradient(circle,rgba(211,122,74,0.14),transparent_56%)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-12 -z-10 mx-auto h-[34rem] max-w-6xl rounded-full bg-[radial-gradient(circle,rgba(60,200,216,0.18),transparent_55%)] blur-3xl" />
 
       <div className="section-container grid items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
         <motion.div
@@ -30,7 +36,7 @@ export default function Hero() {
           <span className="eyebrow-pill">{personalInfo.status}</span>
 
           <div className="mt-7">
-            <p className="section-kicker mb-4">Portfolio / 2026 Edition</p>
+            <p className="section-kicker mb-4">Cybersecurity / Portfolio 2026</p>
             <h1 className="font-display text-[clamp(3.8rem,10vw,7rem)] leading-[0.92] tracking-[-0.06em] text-[var(--color-text)]">
               {personalInfo.headline}
             </h1>
@@ -48,12 +54,12 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.55 }}
             className="mt-9 flex flex-wrap gap-3"
           >
-            <a href="#projects" className="btn-primary">
-              View Projects
+            <a href="#investigations" className="btn-primary">
+              View Investigations
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a href="#contact" className="btn-secondary">
-              Start a Conversation
+              Contact Me
             </a>
             {personalInfo.resumeUrl && (
               <a
@@ -91,13 +97,13 @@ export default function Hero() {
           className="relative"
         >
           <div className="absolute -left-6 top-12 hidden h-28 w-28 rounded-full border border-[var(--color-border)] bg-[rgba(255,255,255,0.03)] blur-[1px] sm:block" />
-          <div className="absolute -right-4 bottom-10 hidden h-20 w-20 rounded-full bg-[rgba(141,161,124,0.14)] blur-2xl sm:block" />
+          <div className="absolute -right-4 bottom-10 hidden h-20 w-20 rounded-full bg-[rgba(54,212,154,0.16)] blur-2xl sm:block" />
 
           <div className="panel relative overflow-hidden p-6 sm:p-8">
             <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-text-dim)]">
-                  Visual signature
+                  Analyst profile
                 </p>
                 <h2 className="mt-3 font-display text-5xl tracking-[-0.08em] text-[var(--color-text)] sm:text-6xl">
                   {initials}
@@ -106,8 +112,8 @@ export default function Hero() {
 
               <div className="flex flex-col gap-3 md:items-end">
                 <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--color-border)] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-text-dim)] md:self-end">
-                  <Sparkles className="h-3.5 w-3.5 text-[var(--color-accent)]" />
-                  Refined direction
+                  <ShieldCheck className="h-3.5 w-3.5 text-[var(--color-accent)]" />
+                  SOC / Blue Team Track
                 </div>
 
                 <div className="animate-float-slow w-fit rounded-[1.6rem] border border-[var(--color-border)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-left md:self-end md:text-right">
@@ -124,7 +130,7 @@ export default function Hero() {
 
             <div className="mt-8 rounded-[1.5rem] border border-[var(--color-border)] bg-[rgba(255,255,255,0.03)] p-5">
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-text-dim)]">
-                Design priorities
+                Current priorities
               </p>
               <ul className="mt-4 space-y-4">
                 {personalInfo.focusAreas.map((focus, index) => (
@@ -144,15 +150,17 @@ export default function Hero() {
             <div className="mt-6 flex flex-col gap-4 rounded-[1.5rem] border border-[var(--color-border)] bg-[rgba(255,255,255,0.025)] p-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-text-dim)]">
-                  Availability
+                  Learning direction
                 </p>
                 <p className="mt-2 max-w-md text-sm text-[var(--color-text-muted)]">
-                  {personalInfo.availability}
+                  Building toward analyst roles through defensive tooling,
+                  roadmap-driven labs, and clear security communication.
                 </p>
               </div>
 
-              <a href="#profile" className="btn-secondary text-sm">
-                Quick profile
+              <a href="#learning" className="btn-secondary text-sm">
+                <Radar className="h-4 w-4" aria-hidden="true" />
+                View learning path
               </a>
             </div>
           </div>

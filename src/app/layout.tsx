@@ -23,12 +23,12 @@ export const metadata: Metadata = {
   title: `${personalInfo.name} | ${personalInfo.title}`,
   description: personalInfo.subheadline,
   keywords: [
-    "portfolio",
-    "personal website",
-    "case studies",
-    "design",
-    "frontend",
-    "creative portfolio",
+    "cybersecurity portfolio",
+    "security analyst portfolio",
+    "SOC analyst student",
+    "blue team portfolio",
+    "cybersecurity student",
+    "security projects",
   ],
   authors: [{ name: personalInfo.name }],
   creator: personalInfo.name,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: `${personalInfo.name} portfolio preview`,
+        alt: `${personalInfo.name} cybersecurity analyst portfolio preview`,
       },
     ],
   },
@@ -68,10 +68,12 @@ const jsonLd = {
   url: siteUrl,
   sameAs,
   knowsAbout: [
-    "Portfolio design",
-    "Frontend development",
-    "Case study presentation",
-    "Visual systems",
+    "Cybersecurity",
+    "SOC fundamentals",
+    "Blue-team analyst workflows",
+    "Vulnerability analysis",
+    "Security tooling",
+    "Technical documentation",
   ],
 };
 
@@ -80,6 +82,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: personalInfo.name,
   url: siteUrl,
+  description: personalInfo.subheadline,
 };
 
 export default function RootLayout({

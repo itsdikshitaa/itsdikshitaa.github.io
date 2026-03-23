@@ -10,6 +10,7 @@ import {
   MapPin,
   MessageCircleMore,
   Send,
+  ShieldCheck,
 } from "lucide-react";
 import { personalInfo, socialLinks } from "@/lib/data";
 import { isValidEmail, isValidLength, sanitize } from "@/lib/utils";
@@ -99,7 +100,8 @@ export default function Contact() {
           <span className="section-kicker">Contact</span>
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            If you would like to discuss an opportunity, collaboration, or project, feel free to reach out.
+            If you would like to discuss an internship, analyst opportunity,
+            security project, or learning collaboration, feel free to reach out.
           </p>
         </motion.div>
 
@@ -168,7 +170,7 @@ export default function Contact() {
                     setFormData({ ...formData, subject: event.target.value })
                   }
                   className="contact-input"
-                  placeholder="What would you like to talk about?"
+                  placeholder="Internship, project, or security conversation"
                 />
               </div>
 
@@ -187,7 +189,7 @@ export default function Contact() {
                     setFormData({ ...formData, message: event.target.value })
                   }
                   className="contact-input resize-y"
-                  placeholder="Share the opportunity, project idea, or question."
+                  placeholder="Share the opportunity, project context, or what you would like to discuss."
                 />
               </div>
 
@@ -207,7 +209,7 @@ export default function Contact() {
                   className="flex items-center gap-2 rounded-[1rem] border border-[rgba(120,193,141,0.35)] bg-[rgba(120,193,141,0.12)] px-4 py-3 text-sm text-[var(--color-success)]"
                 >
                   <CheckCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
-                  Message sent successfully. I will get back to you soon.
+                  Message sent successfully. Thank you for reaching out.
                 </div>
               )}
 
@@ -238,9 +240,9 @@ export default function Contact() {
             className="space-y-5"
           >
             <InfoCard
-              icon={<MessageCircleMore className="h-5 w-5 text-[var(--color-accent-soft)]" />}
-              title="Best way to reach out"
-              description="Use the form for project inquiries, internship opportunities, collaborations, or a simple hello."
+              icon={<ShieldCheck className="h-5 w-5 text-[var(--color-accent-soft)]" />}
+              title="Best fit opportunities"
+              description="SOC internships, student analyst programs, security project collaboration, or mentorship conversations."
             />
             <InfoCard
               icon={<MapPin className="h-5 w-5 text-[var(--color-accent)]" />}
@@ -250,7 +252,14 @@ export default function Contact() {
             <InfoCard
               icon={<Clock3 className="h-5 w-5 text-[var(--color-secondary)]" />}
               title="Response style"
-              description="Professional, clear, and timely communication whenever possible."
+              description="Clear, professional communication with context around projects, learning goals, and next steps."
+            />
+            <InfoCard
+              icon={
+                <MessageCircleMore className="h-5 w-5 text-[var(--color-accent-soft)]" />
+              }
+              title="What to send"
+              description="A role description, internship details, collaboration idea, or a quick note about why you want to connect is perfect."
             />
 
             {socialLinks.length > 0 && (

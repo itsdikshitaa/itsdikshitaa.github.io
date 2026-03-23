@@ -115,7 +115,7 @@ export default function Header() {
             <a
               href={personalInfo.resumeUrl}
               download="resume.pdf"
-              className="hidden sm:flex h-11 w-11 items-center justify-center rounded-full border border-[rgba(211,122,74,0.25)] bg-[rgba(211,122,74,0.06)] text-[var(--color-accent)] hover:bg-[rgba(211,122,74,0.12)] hover:border-[rgba(211,122,74,0.4)] hover:text-[var(--color-accent-soft)]"
+              className="hidden h-11 w-11 items-center justify-center rounded-full border border-[rgba(59,198,216,0.25)] bg-[rgba(59,198,216,0.08)] text-[var(--color-accent)] hover:border-[rgba(59,198,216,0.4)] hover:bg-[rgba(59,198,216,0.14)] hover:text-[var(--color-accent-soft)] sm:flex"
               aria-label="Download resume"
               id="resume-download-header"
             >
