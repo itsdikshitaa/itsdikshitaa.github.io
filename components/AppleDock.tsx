@@ -8,7 +8,7 @@ import {
   BrightnessDownIcon,
   MoonIcon
 } from "./AnimatedIcons";
-import { Linkedin } from "lucide-react";
+import { Linkedin, FileText } from "lucide-react";
 
 interface AppleDockProps {
   visible: boolean;
@@ -21,7 +21,7 @@ export const AppleDock: React.FC<AppleDockProps> = ({ visible, onNavigate, toggl
   const items = [
     { title: 'Home', icon: HomeIcon, onClick: () => { triggerHaptic(); onNavigate('home'); } },
     { title: 'GitHub', icon: GithubIcon, onClick: () => { triggerHaptic(); window.open('https://github.com/itsdikshitaa', '_blank'); } },
-    { title: 'Writing', icon: ArticleIcon, onClick: () => { triggerHaptic(); onNavigate('blogs'); } },
+    { title: 'Resume', icon: FileText, onClick: () => { triggerHaptic(); const link = document.createElement('a'); link.href = '/resume.pdf'; link.download = 'Dikshita_Konwar_Resume.pdf'; link.click(); } },
     { title: 'LinkedIn', icon: Linkedin, onClick: () => { triggerHaptic(); window.open('https://linkedin.com/in/dikshitakonwar05', '_blank'); } },
     {
       title: isDark ? 'Light Mode' : 'Dark Mode',
