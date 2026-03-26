@@ -293,7 +293,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                                 readTime="4 min read"
                                 description="What I focused on while building a browser-based security utility for password generation and optional encrypted local storage."
                                 className="block w-full"
-                                previewImage="https://picsum.photos/seed/passvault-writing/900/600"
+                                previewImage="https://api.pikwy.com/web/69c50e00e25f7c06b64e42c2.jpg"
                             >
                                 <ArticleItem
                                     title="Building PassVault with Privacy-First Browser Security"
@@ -346,7 +346,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             title="PassVault"
                             description="Privacy-first browser utility focused on credential hygiene, cryptographically secure password generation, and optional encrypted local storage."
                             tags={["JavaScript", "Web Crypto", "Browser Security"]}
-                            imageUrl="https://picsum.photos/seed/passvault-security/900/700"
+                            imageUrl="https://api.pikwy.com/web/69c50e00e25f7c06b64e42c2.jpg"
                             isDimmed={hoveredProject !== null && hoveredProject !== 0}
                             onHover={() => setHoveredProject(0)}
                             onLeave={() => setHoveredProject(null)}
