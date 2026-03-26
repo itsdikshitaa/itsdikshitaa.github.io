@@ -18,9 +18,9 @@ const PROJECTS = [
         image: 'https://picsum.photos/seed/passvault-page/800/560'
     },
     {
-        title: 'BlueBorne Scanner',
-        desc: 'Python-based Bluetooth discovery and exposure review project built around BlueBorne-style analysis and protocol-aware scanning.',
-        tags: ['Python', 'Bluetooth', 'Linux', 'PyBluez'],
+        title: 'SecOS Defender v2',
+        desc: 'Endpoint defense platform combining a FastAPI backend, analyst console, Go agent scaffold, Sigma-style rules, and inventory-based vulnerability correlation.',
+        tags: ['FastAPI', 'Go', 'Detection', 'Sigma'],
         image: 'https://picsum.photos/seed/blueborne-page/800/560'
     },
     {

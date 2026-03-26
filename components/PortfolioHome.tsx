@@ -353,10 +353,10 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                         />
                         <ProjectCard
                             index={1}
-                            title="BlueBorne Scanner"
-                            description="Python-based Bluetooth scanner built for local discovery, protocol-aware analysis, and BlueBorne-style exposure review."
-                            tags={["Python", "Bluetooth", "Linux"]}
-                            imageUrl="https://picsum.photos/seed/blueborne-scanner/900/700"
+                            title="SecOS Defender v2"
+                            description="Modern endpoint defense stack with a FastAPI backend, live analyst console, Go agent scaffold, Sigma-style rules, and vulnerability correlation."
+                            tags={["FastAPI", "Go", "Detection Engineering"]}
+                            imageUrl="https://i.ibb.co/4wbWktzR/secv2.jpg"
                             isDimmed={hoveredProject !== null && hoveredProject !== 1}
                             onHover={() => setHoveredProject(1)}
                             onLeave={() => setHoveredProject(null)}
@@ -366,7 +366,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             title="SOC Learning Lab Roadmap"
                             description="An intentional home-lab roadmap for alerts, logs, concise investigation notes, and disciplined blue-team practice."
                             tags={["SOC", "Log Analysis", "Documentation"]}
-                            imageUrl="https://picsum.photos/seed/soc-lab-roadmap/900/700"
+                            imageUrl="https://i.ibb.co/cSLPsW9M/soc-map.jpg"
                             isDimmed={hoveredProject !== null && hoveredProject !== 2}
                             onHover={() => setHoveredProject(2)}
                             onLeave={() => setHoveredProject(null)}
@@ -376,7 +376,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             title="Linux Fundamentals Lab"
                             description="Hands-on Linux work covering system administration, networking, firewall management, Podman containers, and NGINX deployment."
                             tags={["Linux", "Podman", "NGINX"]}
-                            imageUrl="https://picsum.photos/seed/linux-fundamentals-lab/900/700"
+                            imageUrl="https://i.ibb.co/CpG9L0dT/lab.jpg"
                             isDimmed={hoveredProject !== null && hoveredProject !== 3}
                             onHover={() => setHoveredProject(3)}
                             onLeave={() => setHoveredProject(null)}
