@@ -369,6 +369,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             description="An intentional home-lab roadmap for alerts, logs, concise investigation notes, and disciplined blue-team practice."
                             tags={["SOC", "Log Analysis", "Documentation"]}
                             imageUrl="https://i.ibb.co/cSLPsW9M/soc-map.jpg"
+                            pendingLabel="Yet to upload"
                             isDimmed={hoveredProject !== null && hoveredProject !== 2}
                             onHover={() => setHoveredProject(2)}
                             onLeave={() => setHoveredProject(null)}
@@ -379,6 +380,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             description="Hands-on Linux work covering system administration, networking, firewall management, Podman containers, and NGINX deployment."
                             tags={["Linux", "Podman", "NGINX"]}
                             imageUrl="https://i.ibb.co/CpG9L0dT/lab.jpg"
+                            pendingLabel="Yet to upload"
                             isDimmed={hoveredProject !== null && hoveredProject !== 3}
                             onHover={() => setHoveredProject(3)}
                             onLeave={() => setHoveredProject(null)}

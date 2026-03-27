@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion';
-import { Github, Globe, Play, Pause } from 'lucide-react';
+import { Github, Globe, LoaderCircle, Play, Pause } from 'lucide-react';
 import { cn, triggerHaptic } from '../../lib/utils';
 
 interface ProjectCardProps {
@@ -12,6 +12,7 @@ interface ProjectCardProps {
     stars?: number;
     videoUrl?: string;
     imageUrl?: string;
+    pendingLabel?: string;
     index: number;
     isDimmed?: boolean;
     onHover?: () => void;
@@ -27,6 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     stars = 0,
     videoUrl,
     imageUrl,
+    pendingLabel,
     index,
     isDimmed,
     onHover,
@@ -129,6 +131,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                             >
                                 <Globe size={16} />
                             </a>
+                        )}
+                        {!githubUrl && !link && pendingLabel && (
+                            <div
+                                className="p-1.5 rounded-full bg-amber-50 text-amber-700 ring-1 ring-amber-200 dark:bg-amber-500/10 dark:text-amber-300 dark:ring-amber-400/20"
+                                title={pendingLabel}
+                            >
+                                <LoaderCircle size={16} className="animate-spin" />
+                            </div>
                         )}
                     </div>
                 </div>
