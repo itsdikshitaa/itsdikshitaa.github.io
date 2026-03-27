@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import { DynamicNavigation } from './DynamicNavigation';
 import { PageVisitsFooter } from './PageVisitsFooter';
 import { PixelCard } from './PixelCard';
@@ -15,7 +16,8 @@ const PROJECTS = [
         title: 'PassVault',
         desc: 'Privacy-first password utility focused on credential hygiene, secure generation, and optional encrypted local storage in the browser.',
         tags: ['JavaScript', 'Web Crypto', 'Browser Security', 'HTML/CSS'],
-        image: 'https://picsum.photos/seed/passvault-page/800/560'
+        image: 'https://picsum.photos/seed/passvault-page/800/560',
+        link: 'https://vault-five-weld.vercel.app/'
     },
     {
         title: 'SecOS Defender v2',
@@ -106,6 +108,19 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, toggleTh
                                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
                                     {project.desc}
                                 </p>
+                                {project.link && (
+                                    <div className="pt-1">
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                                        >
+                                            Visit live site
+                                            <ArrowUpRight size={14} />
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}

@@ -347,6 +347,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             description="Privacy-first browser utility focused on credential hygiene, cryptographically secure password generation, and optional encrypted local storage."
                             tags={["JavaScript", "Web Crypto", "Browser Security"]}
                             imageUrl="https://api.pikwy.com/web/69c50e00e25f7c06b64e42c2.jpg"
+                            link="https://vault-five-weld.vercel.app/"
                             isDimmed={hoveredProject !== null && hoveredProject !== 0}
                             onHover={() => setHoveredProject(0)}
                             onLeave={() => setHoveredProject(null)}
