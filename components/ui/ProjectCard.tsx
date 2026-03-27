@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion';
-import { ExternalLink, Github, Play, Pause } from 'lucide-react';
+import { Github, Globe, Play, Pause } from 'lucide-react';
 import { cn, triggerHaptic } from '../../lib/utils';
 
 interface ProjectCardProps {
@@ -124,10 +124,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-1.5 rounded-full bg-blue-500 text-white hover:bg-blue-600 shadow-md hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-110 active:scale-95"
-                                title="Visit Live Site"
+                                title="Visit Website"
                                 onClick={(e) => { e.stopPropagation(); triggerHaptic(10); }}
                             >
-                                <ExternalLink size={16} />
+                                <Globe size={16} />
                             </a>
                         )}
                     </div>

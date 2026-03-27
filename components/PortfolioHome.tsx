@@ -347,7 +347,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             description="Privacy-first browser utility focused on credential hygiene, cryptographically secure password generation, and optional encrypted local storage."
                             tags={["JavaScript", "Web Crypto", "Browser Security"]}
                             imageUrl="https://api.pikwy.com/web/69c50e00e25f7c06b64e42c2.jpg"
-                            link="https://vault-five-weld.vercel.app/"
+                            link="https://vault.dikshitaa.tech/"
                             isDimmed={hoveredProject !== null && hoveredProject !== 0}
                             onHover={() => setHoveredProject(0)}
                             onLeave={() => setHoveredProject(null)}
@@ -358,6 +358,7 @@ export const PortfolioHome: React.FC<PortfolioHomeProps> = ({ onNavigate, toggle
                             description="Modern endpoint defense stack with a FastAPI backend, live analyst console, Go agent scaffold, Sigma-style rules, and vulnerability correlation."
                             tags={["FastAPI", "Go", "Detection Engineering"]}
                             imageUrl="https://i.ibb.co/4wbWktzR/secv2.jpg"
+                            githubUrl="https://github.com/itsdikshitaa/SecOS-Defender"
                             isDimmed={hoveredProject !== null && hoveredProject !== 1}
                             onHover={() => setHoveredProject(1)}
                             onLeave={() => setHoveredProject(null)}

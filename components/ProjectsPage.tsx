@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 import { DynamicNavigation } from './DynamicNavigation';
 import { PageVisitsFooter } from './PageVisitsFooter';
 import { PixelCard } from './PixelCard';
@@ -17,13 +17,14 @@ const PROJECTS = [
         desc: 'Privacy-first password utility focused on credential hygiene, secure generation, and optional encrypted local storage in the browser.',
         tags: ['JavaScript', 'Web Crypto', 'Browser Security', 'HTML/CSS'],
         image: 'https://picsum.photos/seed/passvault-page/800/560',
-        link: 'https://vault-five-weld.vercel.app/'
+        link: 'https://vault.dikshitaa.tech/'
     },
     {
         title: 'SecOS Defender v2',
         desc: 'Endpoint defense platform combining a FastAPI backend, analyst console, Go agent scaffold, Sigma-style rules, and inventory-based vulnerability correlation.',
         tags: ['FastAPI', 'Go', 'Detection', 'Sigma'],
-        image: 'https://picsum.photos/seed/blueborne-page/800/560'
+        image: 'https://picsum.photos/seed/blueborne-page/800/560',
+        githubUrl: 'https://github.com/itsdikshitaa/SecOS-Defender'
     },
     {
         title: 'SOC Learning Lab Roadmap',
@@ -118,6 +119,19 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, toggleTh
                                         >
                                             Visit live site
                                             <ArrowUpRight size={14} />
+                                        </a>
+                                    </div>
+                                )}
+                                {project.githubUrl && (
+                                    <div className="pt-1">
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                                        >
+                                            View repository
+                                            <Github size={14} />
                                         </a>
                                     </div>
                                 )}
